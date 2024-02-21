@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-      <div class="container">
-        <h1 class="text-center">Verify OTP</h1>
-        <form action="/verify-otp" method="post">
+      <div class="container bg-info">
+        <h1 class="text-center mt-5">Verify OTP</h1>
+        <form action="/verify-otp" method="post" class="mt-5">
             <div class="row">
-                <input type="text" class="from-control" placeholder="Enter Your Email OTP">
-                <br>
-
-            </div>
+              <div class="col text-center">
+                <input type="text" class="form-control w-50 text-center" name="otp" placeholder="Enter Your Email OTP">
+                <br><br>
             <button type="submit" class="btn btn-warning" name="submit">Submit</button>
+<br><br>
+              </div>
+            </div>
         </form>
       </div>
     <!-- Optional JavaScript -->

@@ -6,7 +6,7 @@ const captcha= require("trek-captcha");
 const ejs = require("ejs");
 const path = require("path");
 const fs = require("fs");
-const { group } = require("console");
+
 
 app = express();
 
@@ -45,7 +45,7 @@ const otp = generateOTP();
 
 async function run(){
     const {token , buffer } = await captcha()
-console.log(token,buffer)
+// console.log(token,buffer)
     fs.createWriteStream('./public/a.gif').on('finish',
     ()=>console.log(token) , generatecaptcha = token ).end(buffer)
 }
@@ -57,16 +57,18 @@ app.get('/verify-otp',(req,res)=>{
     res.render('verify-otp');
 });
 
-app.post('/verfy-otp' , (req,res)=>{
+
+
+app.post('/verify-otp' ,function(req,res){
     if(req.body.otp == otp){
-        res.render('logged-in');
+        res.render('index');
     }
     else{
         res.send('incorrect otp');
     }
 });
 
-app.get('/reg-captcha', (req,res)=>{
+app.get('/', (req,res)=>{
     res.render('reg-captcha');
 });
 

@@ -3,44 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>captcha1</title>
+    <title>Register Form</title>
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
     <style>
         .container{
-            text-align: center;
-            background-color: black;
-            color: aliceblue;
+          
             height: 40%;
             width: 50%;
-            margin-top: 5%;
-            margin-left: 22%;
-            border-radius: 10px;
-            padding-bottom: 3%;
-            padding-top: 1%;
-
+           border: 4px solid;
+background-color: rgb(150, 165, 240);
+border-radius: 20px 45px;
         }
         
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,800&family=Protest+Riot&display=swap');
     
     
 
     </style>
     
 </head>
-<body style="background-color: aqua; font-family: 'Poppins', sans-serif;
-font-family: 'Protest Riot', sans-serif;">
+<body>
     <div class="container">
-    <h1 style="color: yellow;">Register Here</h1><hr><br>
-    <form action="/register-captcha" method="post">
-        Enter Your Name : <input type="text" name="fname" placeholder="Enter First Name" /><br /><br>
-        Enter Your Last Name : <input type="text" name="lname" placeholder="Enter Last Name" /><br /><br>
-        Date Of Birth : <input type="date" name="dob" placeholder="Enter Date of Birth" /><br /><br>
-        City : <input type="text" name="city" placeholder="Enter City" /><br /><br>
-        Enter Your Phone Number : <input type="text" name="phone" placeholder="Enter Phone Number" /><br /><br>
-        Email : <input type="text" name="mail" placeholder="Enter Email" /><br /><br>
-        Create Password : <input type="password" name="password" placeholder="Enter Password" /><br /><br>
-        <img src="/a.gif" /><br /><br>
-        Captcha : <input type="text" name="cap" placeholder="Enter Captcha" /><br /><br>
-        <input class="btn" type="submit" value="submit" name="submit" />
+    <h1 class="text-center mt-5">Register Here</h1><hr><br>
+    <form action="/reg-captcha" method="post">
+        <div class="row">
+            <div class="col">
+                Enter Your Full Name : <input type="text" name="fname"class="form-control" placeholder="Enter Full Name" /><br /><br>
+            </div>
+            <div class="col">
+                Date Of Birth : <input type="date" name="dob"class="form-control" placeholder="Enter Date of Birth" /><br /><br>
+
+            </div>
+        </div>
+        <div class="row">
+        <div class="col">
+        Enetr Your City : <input type="text" name="city"class="form-control" placeholder="Enter City" /><br /><br>
+            
+        </div>
+       
+        <div class="col">
+            Enter Your Phone Number : <input type="text"class="form-control" name="phone" placeholder="Enter Phone Number" /><br /><br>
+
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col">
+            Enter Your Email : <input type="text" name="mail"class="form-control" placeholder="Enter Email" /><br /><br>
+
+        </div>
+       
+        <div class="col">
+            Create Your Password : <input type="password"class="form-control" name="password" placeholder="Enter Password" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 offset-4">
+            <img src="C:\Users\saksh\OneDrive\Documents\GitHub\Captcha-Node Mailer\Capture-with-NodeMailer\public\a.gif"/> <br /><br>
+            Captcha  : <input type="text" name="cap"class="form-control" placeholder="Enter Captcha Code " />
+        </div>
+
+    </div>
+       <div class="row">
+        <div class="col text-center">
+            <input class="btn  btn-warning mt-3 mb-5 w-50" type="submit" value="submit"class="form-control" name="submit" />
+
+        </div>
+       </div>
+       
+
+        
+       
         
     </form>
     
