@@ -4,7 +4,7 @@ const app = express();
 const nodemailer = require('nodemailer');
 const otpGenerator = require('otp-generator');
 const captcha = require('trek-captcha');
-const ejs = require('ejs');
+
 path = require('path');
 fs = require('fs');
 
